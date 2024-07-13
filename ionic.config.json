@@ -1,0 +1,7 @@
+{
+  "name": "cropgames",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

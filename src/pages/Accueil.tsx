@@ -13,25 +13,24 @@ const Accueil: React.FC = () =>{
             <section className="contenu">
                 <div className="introduction">
                     <div className="logo">
-                        <img src={LogoWhiteImage} alt=""/>
+                        <img src={LogoWhiteImage} alt="CropGames Logo"/>
                     </div>
                     <div className="title">
-                        <h1>Farm your town <br /><span>On Your Own</span></h1>
+                        <h1>CropGames: Farm Your Town <br /><span>On Your Own</span></h1>
                     </div>
                 </div>
                 <div className="image-contenu">
                     <p>
-                        <span>Lorem ipsum dolor sit</span>
-                        amet consectetur adipisicing elit. Aperiam,
-                        aliquid. Aperiam, accusantium ducimus
+                        <span>CropGames vous offre une expérience de jeu unique</span> 
+                        où vous pouvez cultiver votre propre ville, gérer vos terrains, et développer votre ferme de manière innovante. Découvrez comment vous pouvez ajouter de nouveaux terrains et faire croître vos cultures pour réussir dans CropGames.
                     </p>
                 </div>
             </section>
             <section className="action">
-                <ButtonGround  sary={leftUp} href="/landList" nameClass="button" contenu="Field list"/>
-                <ButtonGround sary={add} href="/addTerrain" nameClass="button" contenu="Add ground"/>
+                <ButtonGround sary={leftUp} href="/cropgames/landList" nameClass="button" contenu="View CropGames Field List"/>
+                <ButtonGround sary={add} href="/cropgames/addTerrain" nameClass="button" contenu="Add New Terrain to CropGames"/>
             </section>
-        </main>
+            </main>
         </>
     );
   }

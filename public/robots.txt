@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://main--itcropgames.netlify.app/sitemap.xml

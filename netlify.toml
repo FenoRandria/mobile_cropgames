@@ -1,5 +1,5 @@
 [build]
-  command = "ionic build --prod"
+  command = "npm install -g @ionic/cli && ionic build --prod"
   publish = "www"
 
 [[redirects]]

@@ -9,13 +9,13 @@ const Accueil: React.FC = () =>{
     const handleButtonClick = () => {
       window.location.href = "/login";
     };
-    const [nom,setNom] = useState<any>();
-    const [mail,setMail] = useState<any>();
-    const [dtn,setDtn] = useState<any>();
-    const [password,setPassword] = useState<any>();
-    const [repassword,setrePassword] = useState<any>();
+    const [nom,setNom] = useState<string>();
+    const [mail,setMail] = useState<string>();
+    const [dtn,setDtn] = useState<string>();
+    const [password,setPassword] = useState<string>();
+    const [repassword,setrePassword] = useState<string>();
     const apiUrl  = ApiUrl();
-    const [error,setError] = useState<any>(null);
+    const [error,setError] = useState<string>('null');
 
     const seRegister = () =>{
         axios.post(`${apiUrl}proprietaires/inscrire`, {
@@ -27,13 +27,13 @@ const Accueil: React.FC = () =>{
         }).
         then(function (response) {
           if (response.status==200) {
-            console.table(response.data.data);
+            console.table(response.data.data); // eslint-disable-line no-console
             window.location.href = "/login"
           }
         })
         .catch(function (error) {
           setError(error.response.data.message)
-          console.log(error.response);
+          console.log(error.response); // eslint-disable-line no-console
         });
         
     }

@@ -5,17 +5,17 @@ import CardList from '../components/CardList';
 import { ApiUrl } from '../ApiUrl';
 import axios from 'axios';
 const LandList: React.FC = () =>{
-    const [data, setData] = useState<any[]>([]);
+    const [data, setData] = useState<any[]>([]);  // eslint-disable-line @typescript-eslint/no-explicit-any
     const apiUrl  = ApiUrl();
 
     useEffect(() => {
       const fetchData = async () => {
         try {
           const response = await axios.get(`${apiUrl}terrains`);
-          console.table(response.data.data);
+          console.table(response.data.data); // eslint-disable-line no-console
           setData(response.data.data);
         } catch (error) {
-          console.error('Erreur lors de la récupération des données:', error);
+          console.error('Erreur lors de la récupération des données:', error); // eslint-disable-line no-console
         }
       };
       fetchData();

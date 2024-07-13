@@ -22,10 +22,10 @@ const Map: React.FC = () => {
 
     // const initMap = () => {
     //   const mapElement = document.getElementById("map");
-    //   console.log('initMap called');
+    //   console.log('initMap called'); // eslint-disable-line no-console
 
     //   if (!mapElement) {
-    //     console.error("Element with ID 'map' not found");
+    //     console.error("Element with ID 'map' not found"); // eslint-disable-line no-console
     //     return;
     //   }
 
@@ -85,7 +85,7 @@ const Map: React.FC = () => {
     //     Math.floor((worldCoordinate.y * scale) / TILE_SIZE)
     //   );
 
-    //   console.log(latLng.lng());
+    //   console.log(latLng.lng()); // eslint-disable-line no-console
 
     //   return [
     //     "Location",

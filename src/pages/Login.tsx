@@ -13,13 +13,13 @@ const Login: React.FC = () => {
       window.location.href ='/';
   };
 
-  const [mail,setMail] = useState<any>();
-  const [password,setPassword] = useState<any>();
-  const [error,setError] = useState<any>(null);
+  const [mail,setMail] = useState<string>();
+  const [password,setPassword] = useState<string>();
+  const [error,setError] = useState<string>('');
   
   const apiUrl  = ApiUrl();
   const seLogin = () =>{
-    console.log(mail +" ----- "+password)
+    console.log(mail +" ----- "+password) // eslint-disable-line no-console
       
       axios.post(`${apiUrl}proprietaires/login`, {
         mail: mail,
@@ -27,14 +27,14 @@ const Login: React.FC = () => {
       }).
       then(function (response) {
         if (response.status==200) {
-          console.table(response.data.data);
+          console.table(response.data.data); // eslint-disable-line no-console
           window.sessionStorage.setItem("token",response.data.data);
           window.location.href = "/accueil"
         }
       })
       .catch(function (error) {
         setError(error.response.data.message)
-        console.log(error.response.data.message);
+        console.log(error.response.data.message); // eslint-disable-line no-console
 
       });
   }

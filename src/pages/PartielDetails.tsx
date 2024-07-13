@@ -8,23 +8,23 @@ import axios from "axios";
 
 const PartielDetails: React.FC = () => {
   const handleButtonClick = () => {
-    console.log("fdfvdf")
+    console.log("fdfvdf") // eslint-disable-line no-console
     window.location.href="accueil";
   };
-  const [id_parcelle,setId_parcelle] = useState(window.localStorage.getItem("id_parcelle")?.toString()); 
-  const [data, setData] = useState<any>();
-  const [dataCategorie, setDataCategorie] = useState<any[]>([]);
+  const [id_parcelle] = useState(window.localStorage.getItem("id_parcelle")?.toString()); 
+  const [setData] = useState<any>();  // eslint-disable-line @typescript-eslint/no-explicit-any
+  const [dataCategorie, setDataCategorie] = useState<any[]>([]);  // eslint-disable-line @typescript-eslint/no-explicit-any
   const apiUrl  = ApiUrl();
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log(`${apiUrl}parcelles/${id_parcelle}`)
+      console.log(`${apiUrl}parcelles/${id_parcelle}`) // eslint-disable-line no-console
       try {
         const response = await axios.get(`${apiUrl}parcelles/${id_parcelle}`);
-        console.table(response.data.data);
+        console.table(response.data.data); // eslint-disable-line no-console
         setData(response.data.data);
       } catch (error) {
-        console.error('Erreur lors de la récupération des données:', error);
+        console.error('Erreur lors de la récupération des données:', error); // eslint-disable-line no-console
       }
     };
     fetchData();
@@ -32,13 +32,13 @@ const PartielDetails: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log(`${apiUrl}parcelles/categories/${id_parcelle}`)
+      console.log(`${apiUrl}parcelles/categories/${id_parcelle}`) // eslint-disable-line no-console
       try {
         const response = await axios.get(`${apiUrl}parcelles/categories/${id_parcelle}`);
-        console.table(response.data.data);
+        console.table(response.data.data); // eslint-disable-line no-console
         setDataCategorie(response.data.data);
       } catch (error) {
-        console.error('Erreur lors de la récupération des données:', error);
+        console.error('Erreur lors de la récupération des données:', error); // eslint-disable-line no-console
       }
     };
     fetchData();
